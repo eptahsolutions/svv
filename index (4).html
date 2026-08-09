@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--
+  SECURITY: Content Security Policy.
+  This is the *transitional* policy required by the Tailwind Play CDN, which
+  compiles classes in the browser and therefore needs 'unsafe-eval' +
+  'unsafe-inline'. Once you replace the CDN with a pre-built stylesheet (see
+  the note above the Tailwind <script> below), tighten script-src to:
+      script-src 'self';
+  and move the two inline <script> blocks into an external app.js.
+  NOTE: frame-ancestors and X-Frame-Options CANNOT be set via <meta>; they must
+  be sent as real HTTP response headers. See SECURITY.md.
+-->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'self' https://formspree.io; frame-src https://www.google.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; connect-src 'self' https://formspree.io; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+
+<title>SV Anasuya Apartments | SV Infra — Hayathnagar, Hyderabad</title>
+<meta name="description" content="SV Anasuya Apartments by SV Infra — premium 2 & 3 BHK homes in Balaji Nagar, Hayathnagar, Hyderabad. 100% Vaastu compliant, no common walls, 55 flats. Handover December 2027." />
+<meta name="theme-color" content="#1B2A4A" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%231B2A4A'/%3E%3Ccircle cx='12' cy='12' r='3.6' fill='%23B8873D'/%3E%3C/svg%3E" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<!--
+  SECURITY / SUPPLY CHAIN — HIGHEST PRIORITY ITEM ON THIS PAGE.
+  cdn.tailwindcss.com is an unversioned, unpinned third-party script that runs
+  with full privileges on this page. If that CDN is ever compromised or DNS is
+  hijacked, the attacker can read and rewrite the enquiry form (names, phone
+  numbers, emails) before it is submitted. It also cannot be pinned with
+  Subresource Integrity because its contents change.
+
+  Tailwind's own docs say the Play CDN is for development only. Before going
+  live, build the CSS once and self-host it:
+
+      npx tailwindcss -i ./src/input.css -o ./dist/tailwind.css --minify
+
+  then replace this <script> and the tailwind.config block below with:
+
+      <link rel="stylesheet" href="/dist/tailwind.css" />
+
+  and move the colour/font/shadow settings into tailwind.config.js.
+  If you must load a third-party script, pin an exact version and add
+  integrity="sha384-..." + crossorigin="anonymous".
+-->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#1B2A4A',
+          parchment: '#F6F1E7',
+          alabaster: '#FCFAF5',
+          verdant: '#3F6B4F',
+          brass: '#B8873D',
+          slate: '#5B6B82',
+        },
+        fontFamily: {
+          display: ['"Fraunces"', 'serif'],
+          body: ['"Inter"', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
+        },
+        boxShadow: {
+          card: '0 1px 2px rgba(27,42,74,0.06), 0 12px 32px -12px rgba(27,42,74,0.18)',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { font-feature-settings: "tnum" 1; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* Blueprint grid texture */
+  .bg-blueprint {
+    background-image:
+      linear-gradient(rgba(252,250,245,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(252,250,245,0.06) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+  .bg-blueprint-light {
+    background-image:
+      linear-gradient(rgba(27,42,74,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27,42,74,0.05) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+
+  /* Header state */
+  #site-header { transition: background-color .35s ease, box-shadow .35s ease, color .35s ease, backdrop-filter .35s ease; }
+  #site-header.scrolled { background-color: rgba(252,250,245,0.94); box-shadow: 0 1px 0 rgba(27,42,74,0.08); color: #1B2A4A; backdrop-filter: blur(10px); }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.revealed { opacity: 1; transform: none; }
+
+  /* Slow spin for compass motif */
+  .spin-slow { animation: spin 48s linear infinite; transform-origin: center; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .spin-slow { animation: none !important; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* Focus visibility */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid #B8873D;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .modal-backdrop { backdrop-filter: blur(6px); }
+
+  ::selection { background: #B8873D; color: #FCFAF5; }
+</style>
+</head>
+
+<body class="bg-parchment text-ink font-body antialiased">
+
+<!-- ===================== ICON SPRITE (hidden) ===================== -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="18" y2="12"/><polyline points="12 6 18 12 12 18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 13 10 18 19 6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7.4-7-12.5A7 7 0 0 1 19 8.5C19 13.6 12 21 12 21z"/><circle cx="12" cy="8.5" r="2.4"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="14.3 9.7 12 12 9.7 14.3 12 12" fill="currentColor" stroke="none"/><line x1="12" y1="1.6" x2="12" y2="3.6"/><line x1="12" y1="20.4" x2="12" y2="22.4"/><line x1="1.6" y1="12" x2="3.6" y2="12"/><line x1="20.4" y1="12" x2="22.4" y2="12"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="9" width="3.5" height="6" rx="1"/><rect x="18" y="9" width="3.5" height="6" rx="1"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="9" y1="9.5" x2="9" y2="14.5"/><line x1="15" y1="9.5" x2="15" y2="14.5"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="13 1.5 3.5 14 10.5 14 9.5 22.5 20.5 10 13.5 10 13.5 1.5"/></symbol>
+    <symbol id="i-droplet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><path d="M12 2.2s7.3 8.6 7.3 13.3A7.3 7.3 0 0 1 4.7 15.5C4.7 10.8 12 2.2 12 2.2Z"/></symbol>
+    <symbol id="i-lift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><polyline points="9 9.5 12 6.5 15 9.5"/><polyline points="9 14.5 12 17.5 15 14.5"/></symbol>
+    <symbol id="i-parking" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M10 16.5V7.5h3.4a2.6 2.6 0 1 1 0 5.2H10"/></symbol>
+    <symbol id="i-rail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="3.5" y1="20.5" x2="20.5" y2="20.5"/><line x1="4.5" y1="20.5" x2="4.5" y2="7"/><line x1="19.5" y1="20.5" x2="19.5" y2="7"/><line x1="4.5" y1="7" x2="19.5" y2="7"/><line x1="8.5" y1="20.5" x2="8.5" y2="10.5"/><line x1="12" y1="20.5" x2="12" y2="8.5"/><line x1="15.5" y1="20.5" x2="15.5" y2="10.5"/></symbol>
+    <symbol id="i-open3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="9" y="3" width="6" height="18"/><line x1="1.5" y1="7.5" x2="7" y2="7.5"/><line x1="1.5" y1="12" x2="7" y2="12"/><line x1="1.5" y1="16.5" x2="7" y2="16.5"/><line x1="17" y1="7.5" x2="22.5" y2="7.5"/><line x1="17" y1="12" x2="22.5" y2="12"/><line x1="17" y1="16.5" x2="22.5" y2="16.5"/><line x1="12" y1="0.5" x2="12" y2="3"/></symbol>
+  </defs>
+</svg>
+
+<!-- ===================== HEADER ===================== -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 text-alabaster">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3 shrink-0">
+      <svg viewBox="0 0 24 24" class="w-8 h-8 text-brass"><use href="#i-compass" xlink:href="#i-compass"/></svg>
+      <span class="font-display leading-tight">
+        <span class="block text-base font-semibold tracking-tight">SV Infra <span class="text-brass">—</span> SV Anasuya</span>
+        <span class="hidden sm:block text-[11px] font-mono uppercase tracking-[0.18em] opacity-70">Hayathnagar · Hyderabad</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+      <a href="#overview" class="hover:text-brass transition-colors">Overview</a>
+      <a href="#pricing" class="hover:text-brass transition-colors">Pricing &amp; Units</a>
+      <a href="#floor-plans" class="hover:text-brass transition-colors">Floor Plans</a>
+      <a href="#specifications" class="hover:text-brass transition-colors">Specifications</a>
+      <a href="#location" class="hover:text-brass transition-colors">Location</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button type="button" data-open-modal data-flat="" class="hidden sm:inline-flex items-center gap-2 bg-brass hover:bg-brass/90 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors shadow-card">
+        Book Site Visit
+        <svg viewBox="0 0 24 24" class="w-4 h-4"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+      </button>
+      <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" class="lg:hidden p-2 -mr-2">
+        <svg viewBox="0 0 24 24" class="w-6 h-6"><use href="#i-menu" xlink:href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <div id="mobile-nav" class="hidden lg:hidden bg-ink/98 text-alabaster border-t border-alabaster/10">
+    <nav class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-1 text-base font-medium">
+      <a href="#overview" class="py-2.5 border-b border-alabaster/10">Overview</a>
+      <a href="#pricing" class="py-2.5 border-b border-alabaster/10">Pricing &amp; Units</a>
+      <a href="#floor-plans" class="py-2.5 border-b border-alabaster/10">Floor Plans</a>
+      <a href="#specifications" class="py-2.5 border-b border-alabaster/10">Specifications</a>
+      <a href="#location" class="py-2.5 border-b border-alabaster/10">Location</a>
+      <button type="button" data-open-modal data-flat="" class="mt-4 inline-flex items-center justify-center gap-2 bg-brass text-white font-semibold px-5 py-3 rounded-full">
+        Book Site Visit
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section id="top" class="relative bg-ink text-alabaster overflow-hidden">
+  <div class="absolute inset-0 bg-blueprint pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/95 to-ink/70 pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-16 md:pt-40 md:pb-24 grid lg:grid-cols-2 gap-14 items-center">
+    <!-- Content -->
+    <div class="relative z-10">
+      <div class="flex flex-wrap items-center gap-3 mb-7">
+        <span class="inline-flex items-center gap-1.5 bg-alabaster/10 border border-alabaster/15 rounded-full pl-2.5 pr-3.5 py-1.5 text-xs font-mono uppercase tracking-wide">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 text-brass"><use href="#i-pin" xlink:href="#i-pin"/></svg>
+          Hayathnagar, Hyderabad
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-alabaster/10 border border-alabaster/15 rounded-full pl-2.5 pr-3.5 py-1.5 text-xs font-mono uppercase tracking-wide">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 text-brass"><use href="#i-calendar" xlink:href="#i-calendar"/></svg>
+          Possession Dec 2027
+        </span>
+        <span class="inline-flex items-center gap-2 bg-verdant/20 border border-verdant/40 rounded-full pl-2.5 pr-3.5 py-1.5 text-xs font-mono uppercase tracking-wide text-alabaster">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-verdant opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-verdant"></span>
+          </span>
+          Ongoing Project
+        </span>
+      </div>
+
+      <p class="font-mono text-xs uppercase tracking-[0.3em] text-brass mb-3">SV Infra Presents</p>
+      <h1 class="font-display font-semibold leading-[0.98] text-5xl sm:text-6xl md:text-7xl mb-6">
+        SV Anasuya
+        <span class="block italic font-medium text-4xl sm:text-5xl md:text-6xl text-alabaster/85 mt-1">Apartments</span>
+      </h1>
+
+      <p class="text-alabaster/75 text-lg leading-relaxed max-w-xl mb-9">
+        55 thoughtfully designed 2 &amp; 3&nbsp;BHK homes in Balaji Nagar, Hayathnagar — 100% Vaastu compliant, with no common walls and three sides open for uninterrupted light and cross ventilation.
+      </p>
+
+      <div class="flex flex-wrap gap-3 mb-12">
+        <button type="button" data-filter="2bhk" class="group flex items-center gap-3 bg-alabaster text-ink pl-5 pr-4 py-3 rounded-xl hover:bg-brass hover:text-white transition-colors">
+          <span class="font-semibold text-sm">2 BHK</span>
+          <span class="font-mono text-xs opacity-70 group-hover:opacity-90">1233–1296 sft</span>
+          <svg viewBox="0 0 24 24" class="w-4 h-4"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+        </button>
+        <button type="button" data-filter="3bhk" class="group flex items-center gap-3 border border-alabaster/30 pl-5 pr-4 py-3 rounded-xl hover:bg-alabaster hover:text-ink transition-colors">
+          <span class="font-semibold text-sm">3 BHK</span>
+          <span class="font-mono text-xs opacity-70">1503–1620 sft</span>
+          <svg viewBox="0 0 24 24" class="w-4 h-4"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+        </button>
+      </div>
+
+      <!-- Stat strip -->
+      <dl class="grid grid-cols-2 sm:grid-cols-4 gap-6 border-t border-alabaster/15 pt-7">
+        <div>
+          <dt class="text-[11px] font-mono uppercase tracking-wide text-alabaster/50 mb-1">Total Flats</dt>
+          <dd class="font-mono num text-2xl font-semibold text-brass">55</dd>
+        </div>
+        <div>
+          <dt class="text-[11px] font-mono uppercase tracking-wide text-alabaster/50 mb-1">Configuration</dt>
+          <dd class="font-mono num text-2xl font-semibold text-brass">2 &amp; 3 BHK</dd>
+        </div>
+        <div>
+          <dt class="text-[11px] font-mono uppercase tracking-wide text-alabaster/50 mb-1">Price Range</dt>
+          <dd class="font-mono num text-2xl font-semibold text-brass">₹70.5L–93L</dd>
+        </div>
+        <div>
+          <dt class="text-[11px] font-mono uppercase tracking-wide text-alabaster/50 mb-1">Handover</dt>
+          <dd class="font-mono num text-2xl font-semibold text-brass">Dec 2027</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Illustrated elevation (blueprint style) -->
+    <div class="relative z-10 hidden lg:block" aria-hidden="true">
+      <svg viewBox="0 0 600 520" class="w-full h-auto max-w-lg mx-auto">
+        <circle cx="520" cy="70" r="34" fill="none" stroke="#FCFAF5" stroke-opacity="0.18" stroke-width="1"/>
+        <g class="spin-slow" stroke="#B8873D" stroke-opacity="0.55" stroke-width="1.1" fill="none">
+          <line x1="520" y1="42" x2="520" y2="98"/>
+          <line x1="492" y1="70" x2="548" y2="70"/>
+          <circle cx="520" cy="70" r="4" fill="#B8873D" stroke="none"/>
+        </g>
+        <text x="520" y="115" text-anchor="middle" fill="#FCFAF5" fill-opacity="0.4" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="2">VAASTU</text>
+
+        <!-- ground line -->
+        <line x1="60" y1="462" x2="560" y2="462" stroke="#FCFAF5" stroke-opacity="0.2" stroke-width="1"/>
+
+        <!-- trees -->
+        <g stroke="#FCFAF5" stroke-opacity="0.25" stroke-width="1.2" stroke-linecap="round">
+          <line x1="120" y1="462" x2="120" y2="410"/><line x1="120" y1="430" x2="100" y2="415"/><line x1="120" y1="425" x2="140" y2="410"/><line x1="120" y1="440" x2="105" y2="425"/>
+          <line x1="500" y1="462" x2="500" y2="418"/><line x1="500" y1="435" x2="482" y2="420"/><line x1="500" y1="430" x2="518" y2="415"/>
+        </g>
+
+        <!-- building block: 5 floors x 3 bays -->
+        <g stroke="#FCFAF5" stroke-opacity="0.55" stroke-width="1.1" fill="none">
+          <rect x="150" y="62" width="300" height="400"/>
+          <line x1="250" y1="62" x2="250" y2="462"/>
+          <line x1="350" y1="62" x2="350" y2="462"/>
+          <line x1="150" y1="142" x2="450" y2="142"/>
+          <line x1="150" y1="222" x2="450" y2="222"/>
+          <line x1="150" y1="302" x2="450" y2="302"/>
+          <line x1="150" y1="382" x2="450" y2="382"/>
+        </g>
+
+        <!-- windows + balcony rails per unit -->
+        <g stroke="#FCFAF5" stroke-opacity="0.4" stroke-width="0.9" fill="none">
+          <!-- rows -->
+          <rect x="167" y="76" width="66" height="40" rx="1"/><rect x="267" y="76" width="66" height="40" rx="1"/><rect x="367" y="76" width="66" height="40" rx="1"/>
+          <rect x="167" y="156" width="66" height="40" rx="1"/><rect x="267" y="156" width="66" height="40" rx="1"/><rect x="367" y="156" width="66" height="40" rx="1"/>
+          <rect x="167" y="236" width="66" height="40" rx="1"/><rect x="267" y="236" width="66" height="40" rx="1"/><rect x="367" y="236" width="66" height="40" rx="1"/>
+          <rect x="167" y="316" width="66" height="40" rx="1"/><rect x="267" y="316" width="66" height="40" rx="1"/><rect x="367" y="316" width="66" height="40" rx="1"/>
+        </g>
+        <g stroke="#B8873D" stroke-opacity="0.5" stroke-width="1">
+          <line x1="163" y1="126" x2="237" y2="126"/><line x1="171" y1="126" x2="171" y2="134"/><line x1="187" y1="126" x2="187" y2="134"/><line x1="203" y1="126" x2="203" y2="134"/><line x1="219" y1="126" x2="219" y2="134"/><line x1="233" y1="126" x2="233" y2="134"/>
+          <line x1="263" y1="126" x2="337" y2="126"/><line x1="271" y1="126" x2="271" y2="134"/><line x1="287" y1="126" x2="287" y2="134"/><line x1="303" y1="126" x2="303" y2="134"/><line x1="319" y1="126" x2="319" y2="134"/><line x1="333" y1="126" x2="333" y2="134"/>
+          <line x1="363" y1="126" x2="437" y2="126"/><line x1="371" y1="126" x2="371" y2="134"/><line x1="387" y1="126" x2="387" y2="134"/><line x1="403" y1="126" x2="403" y2="134"/><line x1="419" y1="126" x2="419" y2="134"/><line x1="433" y1="126" x2="433" y2="134"/>
+          <line x1="163" y1="206" x2="237" y2="206"/><line x1="263" y1="206" x2="337" y2="206"/><line x1="363" y1="206" x2="437" y2="206"/>
+          <line x1="163" y1="286" x2="237" y2="286"/><line x1="263" y1="286" x2="337" y2="286"/><line x1="363" y1="286" x2="437" y2="286"/>
+          <line x1="163" y1="366" x2="237" y2="366"/><line x1="263" y1="366" x2="337" y2="366"/><line x1="363" y1="366" x2="437" y2="366"/>
+        </g>
+
+        <!-- entrance porch -->
+        <g stroke="#FCFAF5" stroke-opacity="0.55" stroke-width="1.1" fill="none">
+          <path d="M270 462 V420 H330 V462" />
+          <line x1="270" y1="420" x2="330" y2="420"/>
+          <line x1="278" y1="420" x2="278" y2="462"/>
+          <line x1="322" y1="420" x2="322" y2="462"/>
+        </g>
+
+        <!-- roof + tank -->
+        <g stroke="#FCFAF5" stroke-opacity="0.5" stroke-width="1.1" fill="none">
+          <rect x="270" y="42" width="30" height="20"/>
+          <line x1="266" y1="62" x2="304" y2="62"/>
+        </g>
+
+        <!-- dimension line -->
+        <g stroke="#FCFAF5" stroke-opacity="0.35" stroke-width="1">
+          <line x1="150" y1="486" x2="450" y2="486"/>
+          <line x1="150" y1="480" x2="150" y2="492"/>
+          <line x1="450" y1="480" x2="450" y2="492"/>
+        </g>
+        <text x="300" y="506" text-anchor="middle" fill="#FCFAF5" fill-opacity="0.4" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.5">INDICATIVE ELEVATION · 3-SIDE OPEN</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OVERVIEW ===================== -->
+<section id="overview" class="bg-parchment py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-5 reveal">
+        <p class="font-mono text-xs uppercase tracking-[0.3em] text-verdant mb-3">Overview</p>
+        <h2 class="font-display text-4xl md:text-5xl font-semibold leading-tight mb-6">
+          A home built on <span class="italic text-verdant">open sides</span> and settled ground
+        </h2>
+        <p class="text-slate leading-relaxed mb-6">
+          SV Anasuya Apartments brings 55 premium 2 &amp; 3&nbsp;BHK residences to Balaji Nagar, behind Lecturers Colony in Hayathnagar. Every block is planned 100% Vaastu compliant, with no common walls between units — three sides open to light, air and view, rather than the single shared-wall layouts common elsewhere.
+        </p>
+        <p class="text-slate leading-relaxed">
+          The project is currently ongoing, with handover targeted for December 2027.
+        </p>
+      </div>
+
+      <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5 reveal">
+        <div class="bg-alabaster border border-ink/5 rounded-2xl p-6 shadow-card">
+          <svg viewBox="0 0 24 24" class="w-7 h-7 text-verdant mb-4"><use href="#i-compass" xlink:href="#i-compass"/></svg>
+          <h3 class="font-display font-semibold text-lg mb-1.5">100% Vaastu Compliant</h3>
+          <p class="text-sm text-slate leading-relaxed">Layouts planned to Vaastu principles across every unit and block.</p>
+        </div>
+        <div class="bg-alabaster border border-ink/5 rounded-2xl p-6 shadow-card">
+          <svg viewBox="0 0 24 24" class="w-7 h-7 text-verdant mb-4"><use href="#i-open3" xlink:href="#i-open3"/></svg>
+          <h3 class="font-display font-semibold text-lg mb-1.5">No Common Walls</h3>
+          <p class="text-sm text-slate leading-relaxed">Three sides open for cross ventilation and natural light in every home.</p>
+        </div>
+        <div class="bg-alabaster border border-ink/5 rounded-2xl p-6 shadow-card">
+          <svg viewBox="0 0 24 24" class="w-7 h-7 text-verdant mb-4"><use href="#i-droplet" xlink:href="#i-droplet"/></svg>
+          <h3 class="font-display font-semibold text-lg mb-1.5">Abundant Water</h3>
+          <p class="text-sm text-slate leading-relaxed">Krishna water supply backed by a dedicated borewell.</p>
+        </div>
+        <div class="bg-alabaster border border-ink/5 rounded-2xl p-6 shadow-card">
+          <svg viewBox="0 0 24 24" class="w-7 h-7 text-verdant mb-4"><use href="#i-calendar" xlink:href="#i-calendar"/></svg>
+          <h3 class="font-display font-semibold text-lg mb-1.5">Ongoing · Dec 2027</h3>
+          <p class="text-sm text-slate leading-relaxed">Construction is underway, with handover targeted for December 2027.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICING & UNITS ===================== -->
+<section id="pricing" class="bg-alabaster py-20 md:py-28 border-t border-ink/5">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-2xl mb-14 reveal">
+      <p class="font-mono text-xs uppercase tracking-[0.3em] text-verdant mb-3">Pricing &amp; Units</p>
+      <h2 class="font-display text-4xl md:text-5xl font-semibold leading-tight">Two configurations, one standard of build</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- 2 BHK -->
+      <div id="card-2bhk" data-card="2bhk" class="reveal rounded-3xl bg-parchment border border-ink/8 p-8 md:p-10 shadow-card transition-shadow">
+        <div class="flex items-center justify-between mb-8">
+          <span class="font-mono text-xs uppercase tracking-widest bg-ink text-alabaster rounded-full px-3 py-1.5">2 BHK</span>
+          <span class="font-mono text-xs text-slate">1233 &amp; 1296 sft</span>
+        </div>
+        <p class="font-mono text-xs uppercase tracking-wide text-slate mb-1">Starting from</p>
+        <p class="font-display text-5xl font-semibold text-ink mb-6 num">₹70.5L</p>
+
+        <dl class="space-y-3 border-t border-ink/8 pt-6 mb-8 text-sm">
+          <div class="flex justify-between"><dt class="text-slate">Base rate</dt><dd class="font-mono num">₹5,500 / sft</dd></div>
+          <div class="flex justify-between"><dt class="text-slate">Amenities charge</dt><dd class="font-mono num">₹3 Lakhs</dd></div>
+          <div class="flex justify-between"><dt class="text-slate">Sizes available</dt><dd class="font-mono num">1233 sft · 1296 sft</dd></div>
+        </dl>
+
+        <button type="button" data-open-modal data-flat="2bhk" class="w-full inline-flex items-center justify-center gap-2 bg-ink hover:bg-ink/90 text-alabaster font-semibold py-3.5 rounded-xl transition-colors">
+          Enquire Now
+          <svg viewBox="0 0 24 24" class="w-4 h-4"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+        </button>
+      </div>
+
+      <!-- 3 BHK -->
+      <div id="card-3bhk" data-card="3bhk" class="reveal rounded-3xl bg-ink text-alabaster p-8 md:p-10 shadow-card transition-shadow">
+        <div class="flex items-center justify-between mb-8">
+          <span class="font-mono text-xs uppercase tracking-widest bg-brass text-white rounded-full px-3 py-1.5">3 BHK</span>
+          <span class="font-mono text-xs text-alabaster/60">1503 · 1602 · 1620 sft</span>
+        </div>
+        <p class="font-mono text-xs uppercase tracking-wide text-alabaster/60 mb-1">Starting from</p>
+        <p class="font-display text-5xl font-semibold mb-1 num">₹86.5L</p>
+        <p class="font-mono text-xs text-alabaster/50 mb-6">up to ₹93L</p>
+
+        <dl class="space-y-3 border-t border-alabaster/15 pt-6 mb-8 text-sm">
+          <div class="flex justify-between"><dt class="text-alabaster/60">Base rate</dt><dd class="font-mono num">₹5,500 / sft</dd></div>
+          <div class="flex justify-between"><dt class="text-alabaster/60">Amenities charge</dt><dd class="font-mono num">₹4 Lakhs</dd></div>
+          <div class="flex justify-between"><dt class="text-alabaster/60">Sizes available</dt><dd class="font-mono num text-right">1503 · 1602 · 1620 sft</dd></div>
+        </dl>
+
+        <button type="button" data-open-modal data-flat="3bhk" class="w-full inline-flex items-center justify-center gap-2 bg-brass hover:bg-brass/90 text-white font-semibold py-3.5 rounded-xl transition-colors">
+          Enquire Now
+          <svg viewBox="0 0 24 24" class="w-4 h-4"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <p class="text-xs text-slate mt-6 max-w-2xl reveal">
+      *Prices are indicative and exclusive of registration, GST, stamp duty and other statutory charges. Please contact our sales team for a final quotation.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== FLOOR PLANS ===================== -->
+<section id="floor-plans" class="bg-parchment py-20 md:py-28 border-t border-ink/5">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12 reveal">
+      <div class="max-w-xl">
+        <p class="font-mono text-xs uppercase tracking-[0.3em] text-verdant mb-3">Floor Plans</p>
+        <h2 class="font-display text-4xl md:text-5xl font-semibold leading-tight">Indicative unit layouts</h2>
+      </div>
+      <div role="tablist" class="inline-flex bg-alabaster border border-ink/8 rounded-full p-1">
+        <button type="button" data-tab="2bhk" role="tab" aria-selected="true" class="px-5 py-2 rounded-full text-sm font-semibold bg-ink text-alabaster transition-colors">2 BHK</button>
+        <button type="button" data-tab="3bhk" role="tab" aria-selected="false" class="px-5 py-2 rounded-full text-sm font-semibold text-slate transition-colors">3 BHK</button>
+      </div>
+    </div>
+
+    <!-- 2 BHK panel -->
+    <div data-panel="2bhk" class="reveal grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-5 order-2 lg:order-1">
+        <p class="font-mono text-xs uppercase tracking-wide text-slate mb-2">Carpet area</p>
+        <p class="font-display text-4xl font-semibold mb-6"><span data-size-output>1233 sft</span></p>
+        <div data-size-group class="flex gap-2 mb-8">
+          <button type="button" data-size="1233 sft" class="border border-slate/30 bg-brass text-white border-brass px-4 py-2 rounded-full text-sm font-mono">1233 sft</button>
+          <button type="button" data-size="1296 sft" class="border border-slate/30 px-4 py-2 rounded-full text-sm font-mono hover:border-brass">1296 sft</button>
+        </div>
+        <ul class="space-y-2.5 text-sm text-slate">
+          <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="w-4 h-4 text-verdant"><use href="#i-check" xlink:href="#i-check"/></svg>Living &amp; dining, open on 3 sides</li>
+          <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="w-4 h-4 text-verdant"><use href="#i-check" xlink:href="#i-check"/></svg>2 bedrooms + attached &amp; common bath</li>
+          <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="w-4 h-4 text-verdant"><use href="#i-check" xlink:href="#i-check"/></svg>Utility &amp; balcony space</li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7 order-1 lg:order-2 bg-alabaster border border-ink/8 rounded-3xl p-6 md:p-10 shadow-card bg-blueprint-light">
+        <svg viewBox="0 0 420 340" class="w-full h-auto">
+          <g stroke="#1B2A4A" stroke-width="1.4" fill="none" stroke-opacity="0.8">
+            <rect x="20" y="20" width="380" height="300"/>
+            <line x1="20" y1="150" x2="230" y2="150"/>
+            <line x1="230" y1="20" x2="230" y2="320"/>
+            <line x1="230" y1="220" x2="400" y2="220"/>
+            <line x1="120" y1="150" x2="120" y2="320"/>
+          </g>
+          <g fill="#5B6B82" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="0.5">
+            <text x="120" y="90">LIVING / DINING</text>
+            <text x="35" y="185">KITCHEN</text>
+            <text x="150" y="185">BED 2</text>
+            <text x="240" y="60">BED 1 (MASTER)</text>
+            <text x="315" y="270">BATH</text>
+            <text x="240" y="270">FOYER</text>
+          </g>
+          <g stroke="#B8873D" stroke-width="1" stroke-dasharray="3 3">
+            <line x1="20" y1="332" x2="400" y2="332"/>
+          </g>
+          <text x="210" y="326" text-anchor="middle" fill="#B8873D" font-family="IBM Plex Mono, monospace" font-size="10">2 BHK · INDICATIVE LAYOUT</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 3 BHK panel -->
+    <div data-panel="3bhk" class="hidden reveal grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-5 order-2 lg:order-1">
+        <p class="font-mono text-xs uppercase tracking-wide text-slate mb-2">Carpet area</p>
+        <p class="font-display text-4xl font-semibold mb-6"><span data-size-output>1503 sft</span></p>
+        <div data-size-group class="flex flex-wrap gap-2 mb-8">
+          <button type="button" data-size="1503 sft" class="border border-slate/30 bg-brass text-white border-brass px-4 py-2 rounded-full text-sm font-mono">1503 sft</button>
+          <button type="button" data-size="1602 sft" class="border border-slate/30 px-4 py-2 rounded-full text-sm font-mono hover:border-brass">1602 sft</button>
+          <button type="button" data-size="1620 sft" class="border border-slate/30 px-4 py-2 rounded-full text-sm font-mono hover:border-brass">1620 sft</button>
+        </div>
+        <ul class="space-y-2.5 text-sm text-slate">
+          <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="w-4 h-4 text-verdant"><use href="#i-check" xlink:href="#i-check"/></svg>Living &amp; dining, open on 3 sides</li>
+          <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="w-4 h-4 text-verdant"><use href="#i-check" xlink:href="#i-check"/></svg>3 bedrooms, 2 attached baths</li>
+          <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="w-4 h-4 text-verdant"><use href="#i-check" xlink:href="#i-check"/></svg>Utility, servant/store area &amp; balconies</li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7 order-1 lg:order-2 bg-alabaster border border-ink/8 rounded-3xl p-6 md:p-10 shadow-card bg-blueprint-light">
+        <svg viewBox="0 0 420 340" class="w-full h-auto">
+          <g stroke="#1B2A4A" stroke-width="1.4" fill="none" stroke-opacity="0.8">
+            <rect x="20" y="20" width="380" height="300"/>
+            <line x1="20" y1="150" x2="180" y2="150"/>
+            <line x1="180" y1="20" x2="180" y2="320"/>
+            <line x1="290" y1="20" x2="290" y2="320"/>
+            <line x1="20" y1="235" x2="180" y2="235"/>
+            <line x1="290" y1="170" x2="400" y2="170"/>
+          </g>
+          <g fill="#5B6B82" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="0.5">
+            <text x="95" y="90" text-anchor="middle">LIVING / DINING</text>
+            <text x="45" y="195">KITCHEN</text>
+            <text x="45" y="278">UTILITY</text>
+            <text x="185" y="60">BED 1 (MASTER)</text>
+            <text x="185" y="270">BED 2</text>
+            <text x="300" y="60">BED 3</text>
+            <text x="300" y="205">BATH</text>
+          </g>
+          <g stroke="#B8873D" stroke-width="1" stroke-dasharray="3 3">
+            <line x1="20" y1="332" x2="400" y2="332"/>
+          </g>
+          <text x="210" y="326" text-anchor="middle" fill="#B8873D" font-family="IBM Plex Mono, monospace" font-size="10">3 BHK · INDICATIVE LAYOUT</text>
+        </svg>
+      </div>
+    </div>
+
+    <p class="text-xs text-slate mt-10 reveal">Layouts shown are indicative representations, not to exact scale. Actual RERA-approved plans are available from our sales team on request.</p>
+  </div>
+</section>
+
+<!-- ===================== SPECIFICATIONS / AMENITIES ===================== -->
+<section id="specifications" class="bg-ink text-alabaster py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-2xl mb-14 reveal">
+      <p class="font-mono text-xs uppercase tracking-[0.3em] text-brass mb-3">Specifications</p>
+      <h2 class="font-display text-4xl md:text-5xl font-semibold leading-tight">Built around comfort, air and light</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="reveal bg-alabaster/5 border border-alabaster/10 rounded-2xl p-6 hover:border-brass/40 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-7 h-7 text-brass mb-4"><use href="#i-compass" xlink:href="#i-compass"/></svg>
+        <h3 class="font-display font-semibold mb-1.5">100% Vaastu</h3>
+        <p class="text-sm text-alabaster/60 leading-relaxed">Every block and unit planned to Vaastu principles.</p>
+      </div>
+      <div class="reveal bg-alabaster/5 border border-alabaster/10 rounded-2xl p-6 hover:border-brass/40 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-7 h-7 text-brass mb-4"><use href="#i-open3" xlink:href="#i-open3"/></svg>
+        <h3 class="font-display font-semibold mb-1.5">No Common Walls</h3>
+        <p class="text-sm text-alabaster/60 leading-relaxed">Three sides open for ventilation and daylight.</p>
+      </div>
+      <div class="reveal bg-alabaster/5 border border-alabaster/10 rounded-2xl p-6 hover:border-brass/40 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-7 h-7 text-brass mb-4"><use href="#i-dumbbell" xlink:href="#i-dumbbell"/></svg>
+        <h3 class="font-display font-semibold mb-1.5">Gym &amp; Sports Room</h3>
+        <p class="text-sm text-alabaster/60 leading-relaxed">A dedicated indoor space for fitness and recreation.</p>
+      </div>
+      <div class="reveal bg-alabaster/5 border border-alabaster/10 rounded-2xl p-6 hover:border-brass/40 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-7 h-7 text-brass mb-4"><use href="#i-bolt" xlink:href="#i-bolt"/></svg>
+        <h3 class="font-display font-semibold mb-1.5">Generator Backup</h3>
+        <p class="text-sm text-alabaster/60 leading-relaxed">Power backup for lifts and common area needs.</p>
+      </div>
+      <div class="reveal bg-alabaster/5 border border-alabaster/10 rounded-2xl p-6 hover:border-brass/40 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-7 h-7 text-brass mb-4"><use href="#i-droplet" xlink:href="#i-droplet"/></svg>
+        <h3 class="font-display font-semibold mb-1.5">Abundant Water</h3>
+        <p class="text-sm text-alabaster/60 leading-relaxed">Krishna water supply plus dedicated borewell.</p>
+      </div>
+      <div class="reveal bg-alabaster/5 border border-alabaster/10 rounded-2xl p-6 hover:border-brass/40 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-7 h-7 text-brass mb-4"><use href="#i-lift" xlink:href="#i-lift"/></svg>
+        <h3 class="font-display font-semibold mb-1.5">Kone Lifts</h3>
+        <p class="text-sm text-alabaster/60 leading-relaxed">Two 6-passenger Kone elevators per block.</p>
+      </div>
+      <div class="reveal bg-alabaster/5 border border-alabaster/10 rounded-2xl p-6 hover:border-brass/40 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-7 h-7 text-brass mb-4"><use href="#i-parking" xlink:href="#i-parking"/></svg>
+        <h3 class="font-display font-semibold mb-1.5">Ample Parking</h3>
+        <p class="text-sm text-alabaster/60 leading-relaxed">Approx. 1000 sft of dedicated parking area.</p>
+      </div>
+      <div class="reveal bg-alabaster/5 border border-alabaster/10 rounded-2xl p-6 hover:border-brass/40 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-7 h-7 text-brass mb-4"><use href="#i-rail" xlink:href="#i-rail"/></svg>
+        <h3 class="font-display font-semibold mb-1.5">SS Railing Corridors</h3>
+        <p class="text-sm text-alabaster/60 leading-relaxed">Stainless-steel railings along every corridor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCATION ===================== -->
+<section id="location" class="bg-parchment py-20 md:py-28 border-t border-ink/5">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+      <div class="reveal">
+        <p class="font-mono text-xs uppercase tracking-[0.3em] text-verdant mb-3">Location</p>
+        <h2 class="font-display text-4xl md:text-5xl font-semibold leading-tight mb-6">Balaji Nagar, Hayathnagar</h2>
+        <p class="text-slate leading-relaxed mb-8">
+          SV Anasuya Apartments is located in Balaji Nagar, behind Lecturers Colony, Hayathnagar — a fast-developing residential pocket on the eastern edge of Hyderabad.
+        </p>
+
+        <div class="flex items-start gap-3 bg-alabaster border border-ink/8 rounded-2xl p-5 mb-6">
+          <svg viewBox="0 0 24 24" class="w-5 h-5 text-brass shrink-0 mt-0.5"><use href="#i-pin" xlink:href="#i-pin"/></svg>
+          <p class="text-sm leading-relaxed">
+            Balaji Nagar, Behind Lecturers Colony, Hayathnagar,<br />
+            Hyderabad – 501505, Telangana
+          </p>
+        </div>
+
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Balaji%20Nagar%2C%20Behind%20Lecturers%20Colony%2C%20Hayathnagar%2C%20Hyderabad%20501505%2C%20Telangana" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-ink hover:bg-ink/90 text-alabaster font-semibold px-6 py-3.5 rounded-xl transition-colors">
+          Get Directions
+          <svg viewBox="0 0 24 24" class="w-4 h-4"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+        </a>
+      </div>
+
+      <div class="reveal rounded-3xl overflow-hidden border border-ink/8 shadow-card aspect-[4/3] lg:aspect-auto lg:h-[440px]">
+        <!--
+          SECURITY: the embedded map is third-party content.
+          - sandbox limits what the frame may do (no top-level navigation of
+            this page, no downloads, no pointer lock).
+          - allow="" denies every powerful feature (geolocation, camera, mic,
+            payment...) instead of inheriting this page's permissions.
+          - referrerpolicy no longer leaks the full URL over plain HTTP.
+        -->
+        <iframe
+          title="SV Anasuya Apartments location map"
+          class="w-full h-full"
+          style="border:0"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+          allow=""
+          src="https://www.google.com/maps?q=Balaji+Nagar,+Behind+Lecturers+Colony,+Hayathnagar,+Hyderabad+501505,+Telangana&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA BAND ===================== -->
+<section class="bg-ink text-alabaster">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="text-center md:text-left">
+      <h3 class="font-display text-3xl font-semibold mb-2">See it for yourself</h3>
+      <p class="text-alabaster/65">Schedule a site visit and walk through SV Anasuya in person.</p>
+    </div>
+    <button type="button" data-open-modal data-flat="" class="inline-flex items-center gap-2 bg-brass hover:bg-brass/90 text-white font-semibold px-7 py-4 rounded-xl transition-colors shrink-0">
+      Schedule Site Visit
+      <svg viewBox="0 0 24 24" class="w-4 h-4"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-ink text-alabaster border-t border-alabaster/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div class="lg:col-span-1">
+      <div class="flex items-center gap-2.5 mb-4">
+        <svg viewBox="0 0 24 24" class="w-7 h-7 text-brass"><use href="#i-compass" xlink:href="#i-compass"/></svg>
+        <span class="font-display font-semibold">SV Infra</span>
+      </div>
+      <p class="text-sm text-alabaster/60 leading-relaxed">SV Anasuya Apartments — premium 2 &amp; 3 BHK homes in Hayathnagar, Hyderabad.</p>
+    </div>
+
+    <div>
+      <h4 class="font-mono text-xs uppercase tracking-widest text-alabaster/50 mb-4">Explore</h4>
+      <ul class="space-y-2.5 text-sm text-alabaster/75">
+        <li><a href="#overview" class="hover:text-brass transition-colors">Overview</a></li>
+        <li><a href="#pricing" class="hover:text-brass transition-colors">Pricing &amp; Units</a></li>
+        <li><a href="#floor-plans" class="hover:text-brass transition-colors">Floor Plans</a></li>
+        <li><a href="#specifications" class="hover:text-brass transition-colors">Specifications</a></li>
+        <li><a href="#location" class="hover:text-brass transition-colors">Location</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-mono text-xs uppercase tracking-widest text-alabaster/50 mb-4">Contact</h4>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="tel:+919059054506" class="flex items-center gap-2 hover:text-brass transition-colors"><svg viewBox="0 0 24 24" class="w-4 h-4 text-brass"><use href="#i-phone" xlink:href="#i-phone"/></svg>+91 90590 54506</a></li>
+        <li><a href="tel:+919701361818" class="flex items-center gap-2 hover:text-brass transition-colors"><svg viewBox="0 0 24 24" class="w-4 h-4 text-brass"><use href="#i-phone" xlink:href="#i-phone"/></svg>+91 97013 61818</a></li>
+        <li><a href="tel:+919440927434" class="flex items-center gap-2 hover:text-brass transition-colors"><svg viewBox="0 0 24 24" class="w-4 h-4 text-brass"><use href="#i-phone" xlink:href="#i-phone"/></svg>+91 94409 27434</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-mono text-xs uppercase tracking-widest text-alabaster/50 mb-4">Address</h4>
+      <p class="text-sm text-alabaster/75 leading-relaxed flex items-start gap-2">
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-brass shrink-0 mt-0.5"><use href="#i-pin" xlink:href="#i-pin"/></svg>
+        Balaji Nagar, Behind Lecturers Colony, Hayathnagar, Hyderabad – 501505, Telangana
+      </p>
+    </div>
+  </div>
+
+  <div class="border-t border-alabaster/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-alabaster/45">
+      <p>© <span id="year"></span> SV Infra. All rights reserved.</p>
+      <p>RERA No.: <span class="text-alabaster/60">[to be updated by SV Infra]</span> · Images &amp; layouts are indicative representations.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== ENQUIRY MODAL ===================== -->
+<div id="enquiry-modal" class="hidden fixed inset-0 z-[100]">
+  <div id="modal-backdrop" class="modal-backdrop absolute inset-0 bg-ink/60"></div>
+
+  <div class="relative min-h-full flex items-center justify-center p-4">
+    <div id="enquiry-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" class="relative w-full max-w-lg bg-alabaster rounded-3xl shadow-card p-7 md:p-9 max-h-[90vh] overflow-y-auto">
+      <button id="modal-close" type="button" aria-label="Close" class="absolute top-5 right-5 p-1.5 text-slate hover:text-ink">
+        <svg viewBox="0 0 24 24" class="w-5 h-5"><use href="#i-close" xlink:href="#i-close"/></svg>
+      </button>
+
+      <p class="font-mono text-xs uppercase tracking-[0.3em] text-verdant mb-2">SV Anasuya Apartments</p>
+      <h3 id="modal-title" class="font-display text-2xl md:text-3xl font-semibold mb-1">Enquire &amp; schedule a visit</h3>
+      <p class="text-sm text-slate mb-7">Share your details and our sales team will get back within 24 hours.</p>
+
+      <!--
+        action/method are a no-JS fallback only. Normal submissions are
+        intercepted by the script below and sent via fetch, so the visitor stays
+        on the page. If the script fails to run, the browser POSTs here instead
+        of GETting this same URL with the visitor's name, phone and email
+        appended to it.
+      -->
+      <form id="enquiry-form" action="https://formspree.io/f/xgawojdl" method="post" novalidate>
+        <div class="mb-4">
+          <label for="lead-name" class="block text-sm font-medium mb-1.5">Full Name</label>
+          <div class="relative">
+            <svg viewBox="0 0 24 24" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate"><use href="#i-user" xlink:href="#i-user"/></svg>
+            <input id="lead-name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Your full name" class="w-full pl-10 pr-4 py-3 rounded-xl border border-ink/15 bg-white text-sm focus:border-brass" />
+          </div>
+          <p id="err-lead-name" class="text-xs text-red-500 mt-1"></p>
+        </div>
+
+        <div class="mb-4">
+          <label for="lead-phone" class="block text-sm font-medium mb-1.5">Phone Number</label>
+          <div class="flex">
+            <span class="inline-flex items-center px-3.5 rounded-l-xl border border-r-0 border-ink/15 bg-ink/5 text-sm font-mono text-slate">+91</span>
+            <input id="lead-phone" name="phone" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="98765 43210" class="w-full px-4 py-3 rounded-r-xl border border-ink/15 bg-white text-sm focus:border-brass" />
+          </div>
+          <p id="err-lead-phone" class="text-xs text-red-500 mt-1"></p>
+        </div>
+
+        <div class="mb-4">
+          <label for="lead-email" class="block text-sm font-medium mb-1.5">Email Address</label>
+          <div class="relative">
+            <svg viewBox="0 0 24 24" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate"><use href="#i-mail" xlink:href="#i-mail"/></svg>
+            <input id="lead-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" class="w-full pl-10 pr-4 py-3 rounded-xl border border-ink/15 bg-white text-sm focus:border-brass" />
+          </div>
+          <p id="err-lead-email" class="text-xs text-red-500 mt-1"></p>
+        </div>
+
+        <!--
+          SECURITY: honeypot. Hidden from sighted users and screen readers and
+          skipped by the keyboard. Automated lead-spam bots fill every field, so
+          any submission with this populated is silently discarded. The field is
+          named _gotcha because Formspree recognises that name and drops the
+          submission on its side too — so this works even if the script is
+          bypassed and the form is POSTed directly.
+        -->
+        <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+          <label for="lead-company">Company (leave this field empty)</label>
+          <input id="lead-company" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label for="flat-type" class="block text-sm font-medium mb-1.5">Flat Type</label>
+            <select id="flat-type" name="flatType" class="w-full px-3.5 py-3 rounded-xl border border-ink/15 bg-white text-sm focus:border-brass">
+              <option value="">Select</option>
+              <option value="2 BHK">2 BHK</option>
+              <option value="3 BHK">3 BHK</option>
+              <option value="Not sure">Not sure yet</option>
+            </select>
+            <p id="err-flat-type" class="text-xs text-red-500 mt-1"></p>
+          </div>
+          <div>
+            <label for="visit-date" class="block text-sm font-medium mb-1.5">Visit Date</label>
+            <div class="relative">
+              <input id="visit-date" name="visitDate" type="date" class="w-full pl-3.5 pr-3 py-3 rounded-xl border border-ink/15 bg-white text-sm focus:border-brass" />
+            </div>
+            <p id="err-visit-date" class="text-xs text-red-500 mt-1"></p>
+          </div>
+        </div>
+
+        <p id="err-form" role="alert" class="text-xs text-red-500 text-center mt-2"></p>
+
+        <button type="submit" class="w-full mt-3 inline-flex items-center justify-center gap-2 bg-brass hover:bg-brass/90 text-white font-semibold py-3.5 rounded-xl transition-colors">
+          Submit Enquiry
+        </button>
+        <p class="text-[11px] text-slate/70 text-center mt-3">By submitting, you agree to be contacted by our sales team regarding SV Anasuya Apartments.</p>
+      </form>
+
+      <div id="enquiry-success" class="hidden text-center py-6">
+        <div class="w-14 h-14 rounded-full bg-verdant/15 text-verdant flex items-center justify-center mx-auto mb-5">
+          <svg viewBox="0 0 24 24" class="w-7 h-7"><use href="#i-check" xlink:href="#i-check"/></svg>
+        </div>
+        <h4 class="font-display text-2xl font-semibold mb-2">Thank you!</h4>
+        <p class="text-sm text-slate mb-7">Your enquiry has been received. Our team will call you within 24 hours to confirm your site visit.</p>
+        <button id="success-close" type="button" class="inline-flex items-center justify-center gap-2 bg-ink text-alabaster font-semibold px-6 py-3 rounded-xl">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== STRUCTURED DATA ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ApartmentComplex",
+  "name": "SV Anasuya Apartments",
+  "description": "Premium 2 & 3 BHK apartments by SV Infra in Hayathnagar, Hyderabad. 100% Vaastu compliant, no common walls, 55 flats, handover December 2027.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Balaji Nagar, Behind Lecturers Colony, Hayathnagar",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "501505",
+    "addressCountry": "IN"
+  },
+  "numberOfAccommodationUnits": 55,
+  "telephone": "+91 90590 54506"
+}
+</script>
+
+<!-- ===================== SCRIPT ===================== -->
+<script>
+(function () {
+  'use strict';
+
+  /* =================================================================
+     CONFIG
+     ================================================================= */
+
+  // Formspree endpoint. This ID is public — it ships in the page source, so
+  // anyone can read it and POST to it directly. Lock it down in the Formspree
+  // dashboard: restrict allowed domains to your live domain, and turn on their
+  // spam/captcha filtering. The honeypot and timing checks below only stop
+  // lazy bots.
+  var ENQUIRY_ENDPOINT = 'https://formspree.io/f/xgawojdl';
+
+  var ALLOWED_FLATS = ['2bhk', '3bhk'];   // allow-list, never user-extensible
+  var MIN_FILL_MS = 2500;                 // humans take longer than this
+  var RESUBMIT_COOLDOWN_MS = 30000;       // client-side throttle
+  var MAX_VISIT_DAYS_AHEAD = 120;
+  var REQUEST_TIMEOUT_MS = 15000;
+
+  /* =================================================================
+     HELPERS
+     ================================================================= */
+
+  function $(id) { return document.getElementById(id); }
+
+  // Runs a block of setup in isolation. Without this, one thrown error
+  // (a missing element, a blocked third-party script) would abort the rest
+  // of the file — including the form's submit handler, which would leave the
+  // browser free to do a native GET submit and put the visitor's name, phone
+  // and email into the URL, browser history and server access logs.
+  function safe(fn) {
+    try { fn(); } catch (err) { if (window.console) console.warn('init step failed'); }
+  }
+
+  function isAllowedFlat(v) { return ALLOWED_FLATS.indexOf(v) !== -1; }
+
+  // Trim, strip control characters, hard-cap length.
+  // Values are only ever written with textContent / sent as JSON — never
+  // interpolated into HTML — so this is defence in depth, not the only guard.
+  function clean(value, max) {
+    return String(value == null ? '' : value)
+      .replace(/[\u0000-\u001F\u007F]/g, '')
+      .trim()
+      .slice(0, max);
+  }
+
+  // Local calendar date. new Date().toISOString() is UTC, which in IST
+  // (UTC+5:30) yields the *previous* day before 05:30 local time and would
+  // let a visitor pick a date already in the past.
+  function localISODate(d) {
+    var m = d.getMonth() + 1;
+    var day = d.getDate();
+    return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day;
+  }
+
+  /* =================================================================
+     MODAL + ENQUIRY FORM
+     Bound first, so a failure anywhere below cannot leave the form
+     falling back to a native submit.
+     ================================================================= */
+
+  var modal = $('enquiry-modal');
+  var modalPanel = $('enquiry-panel');
+  var form = $('enquiry-form');
+  var successPanel = $('enquiry-success');
+  var flatSelect = $('flat-type');
+  var dateInput = $('visit-date');
+  var honeypot = $('lead-company');
+  var submitBtn = form ? form.querySelector('button[type="submit"]') : null;
+
+  var lastFocused = null;
+  var formShownAt = 0;
+  var lastSubmitAt = 0;
+  var submitting = false;
+
+  function setError(id, msg) {
+    var el = $('err-' + id);
+    if (el) el.textContent = msg || '';       // textContent, never innerHTML
+    var input = $(id);
+    if (input) {
+      input.classList.toggle('border-red-400', !!msg);
+      input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    }
+  }
+
+  function clearErrors() {
+    ['lead-name', 'lead-phone', 'lead-email', 'flat-type', 'visit-date'].forEach(function (id) {
+      setError(id, '');
+    });
+    var box = $('err-form');
+    if (box) box.textContent = '';
+  }
+
+  function setVisitDateBounds() {
+    if (!dateInput) return;
+    var now = new Date();
+    var max = new Date(now.getTime());
+    max.setDate(max.getDate() + MAX_VISIT_DAYS_AHEAD);
+    dateInput.min = localISODate(now);
+    dateInput.max = localISODate(max);
+  }
+
+  function validate() {
+    clearErrors();
+    var valid = true;
+
+    var name = clean($('lead-name') ? $('lead-name').value : '', 80);
+    var phone = clean($('lead-phone') ? $('lead-phone').value : '', 10);
+    var email = clean($('lead-email') ? $('lead-email').value : '', 254);
+    var flat = flatSelect ? flatSelect.value : '';
+    var date = dateInput ? dateInput.value : '';
+
+    if (name.length < 2) { setError('lead-name', 'Please enter your full name.'); valid = false; }
+    if (!/^[6-9]\d{9}$/.test(phone)) { setError('lead-phone', 'Enter a valid 10-digit mobile number.'); valid = false; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { setError('lead-email', 'Enter a valid email address.'); valid = false; }
+    if (!flat) { setError('flat-type', 'Please select a flat type.'); valid = false; }
+
+    // The min/max attributes are a convenience, not a control — anyone can edit
+    // them in devtools. Re-check the value here, and again on the server.
+    if (!date) {
+      setError('visit-date', 'Please pick a preferred date.');
+      valid = false;
+    } else if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+      setError('visit-date', 'Please pick a valid date.');
+      valid = false;
+    } else if (dateInput && ((dateInput.min && date < dateInput.min) || (dateInput.max && date > dateInput.max))) {
+      setError('visit-date', 'Pick a date within the next few months.');
+      valid = false;
+    }
+
+    if (!valid) return null;
+
+    // Keys become the field labels in the Formspree notification email.
+    // _subject is a Formspree control field; email is auto-detected as reply-to.
+    return {
+      _subject: 'SV Anasuya enquiry — ' + name + ' (' + flat + ')',
+      name: name,
+      phone: '+91' + phone,
+      email: email,
+      'Flat type': flat,
+      'Preferred visit date': date,
+      'Submitted from': window.location.hostname
+    };
+  }
+
+  function lockSubmit(locked) {
+    submitting = locked;
+    if (!submitBtn) return;
+    submitBtn.disabled = locked;
+    submitBtn.classList.toggle('opacity-60', locked);
+    submitBtn.classList.toggle('cursor-not-allowed', locked);
+    submitBtn.textContent = locked ? 'Sending…' : 'Submit Enquiry';
+  }
+
+  function showSuccess() {
+    if (form) form.classList.add('hidden');
+    if (successPanel) successPanel.classList.remove('hidden');
+    if (form) form.reset();          // don't leave PII sitting in the DOM
+    lockSubmit(false);
+  }
+
+  function sendEnquiry(payload) {
+    if (!ENQUIRY_ENDPOINT) { showSuccess(); return; }
+
+    lockSubmit(true);
+
+    var controller = ('AbortController' in window) ? new AbortController() : null;
+    var timer = setTimeout(function () { if (controller) controller.abort(); }, REQUEST_TIMEOUT_MS);
+
+    fetch(ENQUIRY_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // Formspree returns JSON instead of an HTML redirect when this is set.
+        'Accept': 'application/json'
+      },
+      // Cross-origin request: never attach cookies, and refuse to follow a
+      // redirect somewhere else if the endpoint is ever repointed.
+      credentials: 'omit',
+      mode: 'cors',
+      cache: 'no-store',
+      redirect: 'error',
+      body: JSON.stringify(payload),
+      signal: controller ? controller.signal : undefined
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('bad status');
+        showSuccess();
+      })
+      .catch(function () {
+        // Deliberately generic: never surface endpoint error detail to the page.
+        var box = $('err-form');
+        if (box) box.textContent = 'Sorry, we could not send that just now. Please call us on +91 90590 54506.';
+        // Clear the throttle. Without this, a visitor retrying inside the
+        // cooldown window would trip the duplicate check and be shown the
+        // "Thank you!" panel for an enquiry that was never actually sent.
+        lastSubmitAt = 0;
+        lockSubmit(false);
+      })
+      .then(function () { clearTimeout(timer); });
+  }
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (submitting) return;
+
+      var now = Date.now();
+
+      // Bot filters. Both fail silently — never tell a bot why it was dropped.
+      if (honeypot && honeypot.value) { showSuccess(); return; }
+      if (formShownAt && (now - formShownAt) < MIN_FILL_MS) { showSuccess(); return; }
+      if (lastSubmitAt && (now - lastSubmitAt) < RESUBMIT_COOLDOWN_MS) { showSuccess(); return; }
+
+      var payload = validate();
+      if (!payload) return;
+
+      lastSubmitAt = now;
+
+      // NOTE: none of the above is a security control on its own. Everything
+      // here runs on the visitor's machine and can be bypassed with a single
+      // curl request. The server MUST independently validate every field,
+      // rate-limit by IP, and check the honeypot. See SECURITY.md.
+      sendEnquiry(payload);
+    });
+  }
+
+  function openModal(flat) {
+    if (!modal || !form) return;
+    lastFocused = document.activeElement;
+    form.reset();
+    clearErrors();
+    lockSubmit(false);
+    setVisitDateBounds();
+    if (successPanel) successPanel.classList.add('hidden');
+    form.classList.remove('hidden');
+
+    if (flatSelect) {
+      if (flat === '2bhk') flatSelect.value = '2 BHK';
+      else if (flat === '3bhk') flatSelect.value = '3 BHK';
+      else flatSelect.value = '';
+    }
+
+    formShownAt = Date.now();
+    modal.classList.remove('hidden');
+    modal.removeAttribute('aria-hidden');
+    document.body.classList.add('overflow-hidden');
+    setTimeout(function () { var n = $('lead-name'); if (n) n.focus(); }, 50);
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.add('hidden');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('overflow-hidden');
+    if (form) form.reset();          // clear PII when the visitor walks away
+    clearErrors();
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+  }
+
+  safe(function () {
+    setVisitDateBounds();
+    if (modal) modal.setAttribute('aria-hidden', 'true');
+
+    document.querySelectorAll('[data-open-modal]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var flat = btn.dataset.flat || '';
+        openModal(isAllowedFlat(flat) ? flat : '');
+      });
+    });
+
+    ['modal-close', 'modal-backdrop', 'success-close'].forEach(function (id) {
+      var el = $(id);
+      if (el) el.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (!modal || modal.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'Tab') trapFocus(e);
+    });
+  });
+
+  function trapFocus(e) {
+    if (!modalPanel) return;
+    var focusables = Array.prototype.filter.call(
+      modalPanel.querySelectorAll('button, input, select, textarea, a[href], [tabindex]:not([tabindex="-1"])'),
+      function (el) { return !el.disabled && el.offsetParent !== null && el.tabIndex !== -1; }
+    );
+    if (!focusables.length) return;
+    var first = focusables[0];
+    var last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+
+  /* =================================================================
+     PRESENTATION
+     ================================================================= */
+
+  safe(function () {
+    var year = $('year');
+    if (year) year.textContent = String(new Date().getFullYear());
+  });
+
+  /* ---------- Header scroll state ---------- */
+  safe(function () {
+    var header = $('site-header');
+    if (!header) return;
+    function onScroll() {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  });
+
+  /* ---------- Mobile menu ---------- */
+  safe(function () {
+    var menuBtn = $('menu-toggle');
+    var mobileNav = $('mobile-nav');
+    if (!menuBtn || !mobileNav) return;
+
+    menuBtn.addEventListener('click', function () {
+      var isHidden = mobileNav.classList.contains('hidden');
+      mobileNav.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(isHidden));
+    });
+    mobileNav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        mobileNav.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+
+  /* ---------- Reveal on scroll ---------- */
+  safe(function () {
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('revealed'); });
+    }
+  });
+
+  /* ---------- Floor plan tabs ---------- */
+  var tabs = document.querySelectorAll('[data-tab]');
+  var panels = document.querySelectorAll('[data-panel]');
+
+  function switchFloorTab(flat) {
+    if (!isAllowedFlat(flat)) return;
+    tabs.forEach(function (t) {
+      var active = t.dataset.tab === flat;
+      t.classList.toggle('bg-ink', active);
+      t.classList.toggle('text-alabaster', active);
+      t.classList.toggle('text-slate', !active);
+      t.setAttribute('aria-selected', String(active));
+    });
+    panels.forEach(function (p) {
+      p.classList.toggle('hidden', p.dataset.panel !== flat);
+    });
+  }
+
+  safe(function () {
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { switchFloorTab(t.dataset.tab); });
+    });
+  });
+
+  /* ---------- Size pill selection ---------- */
+  safe(function () {
+    document.querySelectorAll('[data-size-group]').forEach(function (group) {
+      var pills = group.querySelectorAll('[data-size]');
+      var label = group.parentElement ? group.parentElement.querySelector('[data-size-output]') : null;
+      pills.forEach(function (p) {
+        p.addEventListener('click', function () {
+          pills.forEach(function (x) {
+            x.classList.remove('bg-brass', 'text-white', 'border-brass');
+            x.classList.add('border-slate/30');
+          });
+          p.classList.add('bg-brass', 'text-white', 'border-brass');
+          p.classList.remove('border-slate/30');
+          if (label) label.textContent = clean(p.dataset.size, 20);
+        });
+      });
+    });
+  });
+
+  /* ---------- Pricing card highlight ---------- */
+  // Previously this concatenated a value straight into a CSS selector
+  // (querySelector('[data-card="' + flat + '"]')), which is selector injection
+  // waiting to happen the moment that value comes from anywhere dynamic.
+  // Resolved through a fixed map instead.
+  var CARD_IDS = { '2bhk': 'card-2bhk', '3bhk': 'card-3bhk' };
+  var RING = ['ring-2', 'ring-brass', 'ring-offset-4', 'ring-offset-alabaster'];
+
+  function highlightCard(flat) {
+    if (!isAllowedFlat(flat)) return;
+    document.querySelectorAll('[data-card]').forEach(function (card) {
+      card.classList.remove.apply(card.classList, RING);
+    });
+    var target = $(CARD_IDS[flat]);
+    if (!target) return;
+    target.classList.add.apply(target.classList, RING);
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(function () {
+      target.classList.remove.apply(target.classList, RING);
+    }, 2600);
+  }
+
+  /* ---------- Hero quick filters ---------- */
+  safe(function () {
+    document.querySelectorAll('[data-filter]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var flat = btn.dataset.filter;
+        if (!isAllowedFlat(flat)) return;
+        switchFloorTab(flat);
+        var pricing = $('pricing');
+        if (pricing) pricing.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(function () { highlightCard(flat); }, 450);
+      });
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
